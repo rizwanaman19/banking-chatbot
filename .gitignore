@@ -1,0 +1,26 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+chatbot_EN/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Generated data that can be rebuilt with `python src/ingest.py`.
+# The source CSV under data/raw/ IS tracked.
+*.log
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

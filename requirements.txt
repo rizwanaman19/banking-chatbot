@@ -1,0 +1,24 @@
+# Banking FAQ Chatbot - Python dependencies
+#
+# These versions are the ones this project was built and tested against.
+# Install with:  pip install -r requirements.txt
+#
+# Ollama itself is a separate program, not a Python package.
+# Download it from https://ollama.com and run `ollama pull llama3.2:3b`.
+
+# --- Retrieval pipeline -------------------------------------------------
+chromadb==1.5.9                 # persistent vector database
+sentence-transformers==6.1.0    # local embedding model (all-MiniLM-L6-v2)
+pandas==3.0.6                   # CSV loading in document_loader.py
+numpy==2.5.3                    # embedding arrays passed to ChromaDB
+
+# --- Chatbot -----------------------------------------------------------
+ollama==0.6.3                   # client for the local LLM
+streamlit==1.65.0               # web chat interface
+
+# --- Optional ----------------------------------------------------------
+# Only needed if you want to keep settings in a .env file. The app works
+# without it; config.py falls back to real environment variables.
+python-dotenv==1.2.4
+
+# Removed: pypdf. The project never reads PDF files.
